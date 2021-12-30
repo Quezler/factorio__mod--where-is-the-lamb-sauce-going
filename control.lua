@@ -14,7 +14,7 @@ function trigger()
             for _, logistic_network in pairs(logistic_networks) do
                 for _, logistic_chest in pairs(logistic_network.requester_points) do
                     if(logistic_chest.mode == defines.logistic_mode.requester) then
-                        if(logistic_chest.owner.request_from_buffers == true and logistic_chest.owner.player == nil) then
+                        if(logistic_chest.owner.request_from_buffers == true and logistic_chest.owner.type == "logistic-container") then
                         -- only blue ones which request from buffers
 
                             if(logistic_chest.filters) then
